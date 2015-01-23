@@ -14,7 +14,7 @@ public class WelcomeClass{
     //  add main method
     public static void main(String[] args){
     
-    // print the statement with the box around it
+    // print the Welcome, UserID, Description, and Designs
         System.out.println("  -----------");
         System.out.println("  | WELCOME |");
         System.out.println("  -----------");
@@ -26,7 +26,7 @@ public class WelcomeClass{
         System.out.println("I have worked at a movie theater, started a sunglasses sales");
         System.out.println("business, and traveled to six foreign countries on cruises.");
     
-    //test/testtest    
+    //test
         
     }
     
