@@ -24,12 +24,6 @@ public class Cookies {
                 }
         
 
-        else if (nPeople == 1) {
-            System.out.println("You did not enter an int.");
-            return; //leaves the program, i.e.
-            //the program terminates
-        }
-
         System.out.print("Enter the number of cookies you plan to buy: ");
         int nCookies = scan.nextInt();
         if (nCookies < 0) {
@@ -37,11 +31,6 @@ public class Cookies {
             return;
         }
 
-        else {
-            System.out.println("You did not enter an int.");
-            return; //leaves the program, i.e.
-            //the program terminates
-        }
 
         System.out.print("How many do you want each person to get? ");
         int nCookiesEach = scan.nextInt();
@@ -49,20 +38,19 @@ public class Cookies {
             System.out.println("No negative ints.");
             return;
         }
-        else {
-            System.out.println("You did not enter an int.");
-            return; //leaves the program, i.e.
-            //the program terminates
 
-        }
+        int moreCookies = nCookiesEach * nPeople - nCookies;
 
-
-
-        if ((nCookiesEach * nPeople) < nCookies) {
-                System.out.println("You do not have enough cookies.");
+        if ((nCookiesEach * nPeople) > nCookies) {
+                System.out.println("You do not have enough cookies. You need to buy at least " + moreCookies + " more.");
             }
-            else {
+        if ((nCookiesEach * nPeople) < nCookies) {
+                if (nCookies % nPeople != 0){
+                    System.out.println("You have enough cookies, but they will not divide evenly.");
+                }
+                else{
                 System.out.println("You have enough cookies.");
+                }
             }
     }
 
