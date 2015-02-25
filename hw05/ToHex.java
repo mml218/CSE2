@@ -8,6 +8,7 @@
 //      java ToHex//
 
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 //  define a class
 public class ToHex {
@@ -16,11 +17,12 @@ public class ToHex {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
+       
         System.out.println("Enter three numbers representing RGB values: "); //prompts user to enter numbers
         int nRed = scan.nextInt();
         int nGreen = scan.nextInt();
         int nBlue = scan.nextInt(); // enters three numbers between 0 and 255 to convert to Hexidecimal
-        
+       
         int nRedHex1;
         int nRedHex2; //establishes decimal number of value of number
         String nRedZero1;
