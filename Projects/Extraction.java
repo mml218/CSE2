@@ -7,39 +7,31 @@ public class Extraction {
 
 public static void main(String [] args) throws IOException {
     Scanner scan = new Scanner(System.in);
-            System.out.print("Enter company: ");
-            String company = scan.next();
-    URL url = new URL ("http://finance.yahoo.com/q;_ylt=ApXYM9sPHVWXtOB_j4pOewsnv7gF?uhb=uhb2&fr=uh3_finance_vert_gs&type=2button&s=" + company + "%2C");
+        //    System.out.print("Enter company: ");
+        //    String company = scan.next();
+    URL url = new URL ("http://research.stlouisfed.org/fred2/data/GDPC1.txt");
     BufferedReader reader = null;
     BufferedWriter writer = null;
     String message = null;
     String errorMessage = "Try again.";
     String line = null;
-    int start = line.indexOf("<title>");
-    int end = line.indexOf("</title>");
-    try {
+    String substr1 = "<title>";
+    String substr2 = "</title>";
+    int start;
+    int end;
         reader = new BufferedReader(new InputStreamReader(url.openStream()));
         writer = new BufferedWriter(new FileWriter("data5.txt"));
 
-        if ((line = reader.readLine()) != null) {
+    String stockPrice;
 
-            if (start != -1) {
-            line.substring(start + "<title>".length(), end);
-            // message = line.substring(0, 100);
+
+        while ((line = reader.readLine()) != null) {
+             // start = line.indexOf(substr1);
+             // end = line.indexOf(substr2);
+             // stockPrice = line.substring();
+                     writer.write(line);
+                     writer.newLine();
             }
-        }
-
-            if ((line = reader.readLine()) != null) {
-                System.out.println("Maybe this worked");
-                writer.write(message);
-                writer.newLine();
-            }
-
-        } 
-    
-    finally {
-        if (reader != null)
-            return;
+//    System.out.println("Start is: " + start + " End is: " + end);
     }
-}
 }
