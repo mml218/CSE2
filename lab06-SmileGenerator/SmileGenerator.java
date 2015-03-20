@@ -57,9 +57,8 @@ public class SmileGenerator{
     	counter++;
         }        
         
-    
 
-        System.out.println(" ");
+        System.out.println("");
         return;
     }
     
