@@ -18,7 +18,25 @@ public class wavesedited{
     //  add main method
     public static void main(String[] args){
         
-        Scanner scan = new Scanner(System.in); //imports scanner
+/*        int escapeValue;
+        int randomNumber2 = (int) Math.random()*10;
+            if (randomNumber2 < 11){
+                escapeValue = 10;
+                System.out.println(escapeValue + " " + randomNumber2);
+            }
+            
+*/
+   //     int number = (int) Math.random()*10;
+     //   System.out.println(number);
+        
+    //    int randomWithRange(0,2);
+ //       {
+   //        int range = (int 1 - int 0) + 1;     
+     //      System.out.println((int)(Math.random() * (1) + 1));
+       // }
+    System.out.println((int)(Math.random()*2));
+        
+/*        Scanner scan = new Scanner(System.in); //imports scanner
         System.out.println("Enter a number between 1 and 30: ");
         
         
@@ -128,6 +146,8 @@ public class wavesedited{
             }
             count1++;
         }
+
+*/
         
     }
     
